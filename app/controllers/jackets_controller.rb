@@ -1,7 +1,8 @@
 class JacketsController < ApplicationController
 
     def index
-      @jackets = Jacket.all
+      jacket_brand = params[:jacket_brand]
+      @jackets = Jacket.search(jacket_brand)
       json_response(@jackets)
     end
   
