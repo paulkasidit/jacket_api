@@ -26,10 +26,6 @@ class JacketsController < ApplicationController
     end
   
     private
-    def json_response(object, status = :ok)
-      render json: object, status: status
-    end
-  
     def jacket_params
       params.permit(:jacket_brand, :jacket_manufacturer, :jacket_category)
     end
