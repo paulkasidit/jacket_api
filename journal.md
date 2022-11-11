@@ -1,6 +1,6 @@
 --work log--- 
 
-11.09.2022 
+#11.09.2022 
  
  -jacket post results page returned 200 instead of expected 201, figure out a way to change the return HTTP status to pass test. 
  
@@ -22,4 +22,4 @@ As a user, I want to see the most popular travel destinations by number of revie
 As a user, I want to PUT and DELETE reviews, but only if I wrote them. (Start by requiring a user_name param to match the user_name of the author on the message. You can always try authentication later.)
 As a user, I want to look up random destinations just for fun.
 
-11.10.2022
+#11.10.2022
