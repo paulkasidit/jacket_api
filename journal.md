@@ -2,6 +2,7 @@
 #11.10.2022
 to do 
  ------
+ - Configure new route to show all jackets in the database. 
  - follow objectives of API guidelines Epicouds 
 
 e.g...
@@ -19,7 +20,7 @@ As a user, I want to look up random destinations just for fun.
 
 #11.09.2022 
  
- -jacket post results page returned 200 instead of expected 201, figure out a way to change the return HTTP status to pass test. 
+ - X jacket post results page returned 200 instead of expected 201, figure out a way to change the return HTTP status to pass test. 
  
 
  to do 
