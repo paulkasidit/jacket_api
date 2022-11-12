@@ -2,6 +2,7 @@
 #11.10.2022
 to do 
  ------
+ - Setup relationship for jackets & reviews table
  - Configure new route to show all jackets in the database. 
  - follow objectives of API guidelines Epicouds 
 
