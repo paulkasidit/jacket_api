@@ -21,11 +21,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_15_020634) do
     t.integer "price", default: 0
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.integer "jacket_id"
-    t.string "author"
-    t.string "content_body"
-  end
-
-  add_foreign_key "reviews", "jackets"
 end
