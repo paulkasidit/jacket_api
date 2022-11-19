@@ -1,10 +1,15 @@
 class JacketsController < ApplicationController
 
     def index
+      @jackets = Jacket.all 
+      json_response(@jackets)
+    end
+
+    def search 
       jacket_brand = params[:jacket_brand]
       @jackets = Jacket.search(jacket_brand)
       json_response(@jackets)
-    end
+    end 
   
     def show
       @jacket = Jacket.find(params[:id])

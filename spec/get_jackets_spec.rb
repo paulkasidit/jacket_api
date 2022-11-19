@@ -1,19 +1,13 @@
 require 'rails_helper'
 
-describe "search a jacket by category", :type => :request do
-
-  before do   
-    post '/jackets/', params: {:jacket_brand => 'Moncler',
-                               :jacket_manufacturer => 'French Company',
-                               :jacket_category => 'bomber' } 
-  end 
+describe "api index lists all jackets", :type => :request do
 
   let!(:jackets) { FactoryBot.create_list(:jacket, 50)}
 
-  before { get '/jackets?jacket_brand=Moncler'}
+  before { get '/jackets'}
 
   it 'returns all jackets' do
-    expect(JSON.parse(response.body).size).to eq(1)
+    expect(JSON.parse(response.body).size).to eq(50)
   end
 
   it 'returns status code 200' do
