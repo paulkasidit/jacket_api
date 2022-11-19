@@ -9,7 +9,7 @@ describe "post a jacket to the correct specified path", :type => :request do
       :jacket_category => 'test_category'
       })
 
-    review_params = Review.create({ :jacket_id =>  @jacket1.id, 
+    review_params = Review.create({ :jacket_id =>  jacket_params.id, 
                                     :author => 'Paul',
                                     :content_body => 'The best jacket ever, the fabric is soft to the touch.'})
 

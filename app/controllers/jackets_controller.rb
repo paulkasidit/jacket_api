@@ -30,4 +30,5 @@ class JacketsController < ApplicationController
     def jacket_params
       params.permit(:jacket_brand, :jacket_manufacturer, :jacket_category)
     end
+    
 end

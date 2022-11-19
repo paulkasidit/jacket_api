@@ -10,14 +10,14 @@ describe "get reviews based on jacket id", :type => :request do
       :jacket_category => 'test_category'
       })
 
-    review_params = Review.create({ :jacket_id =>  @jacket1.id, 
+    review_params = Review.create({ :jacket_id =>  jacket_params.id, 
                                     :author => 'Paul',
                                     :content_body => 'The best jacket ever, the fabric is soft to the touch.'})
 
     post '/jackets', jacket_params 
     post "jacket/#{jacket_params.id}/review/#{review_params.id}", review_params 
   end
-  
+
   it 'returns all associated reviews witht the jacket' do
     get "jacket/#{jacket_params.id}/review/#{review_params.id}", review_params  
     expect(JSON.parse(response.body).size).to eq(1)

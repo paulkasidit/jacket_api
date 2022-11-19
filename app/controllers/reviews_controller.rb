@@ -1,10 +1,5 @@
 class ReviewsController < ApplicationController
 
-  before_action :authenticate_user!, :except => [:index]
-  before_action :only => [:edit, :show] do
-    render :error unless current_user && current_user.admin 
-  end
-
   def new
     @jacket = Jacket.find(params[:jacket_id])
     @review = @Jacket.reviews.new
@@ -13,17 +8,11 @@ class ReviewsController < ApplicationController
   def show
     @jacket = Jacket.find(params[:jacket_id])
     @review = Review.find(params[:id])
-    render :show
   end
 
   def create
     @jacket = Jacket.find(params[:jacket_id])
     @review = @jacket.reviews.new(review_params)
-    if @review.save
-      redirect_to jacket_path(@jacket)
-    else
-      status: :unprocessable_entity
-    end
   end
 
   def update
@@ -46,4 +35,5 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:jacket_id, :author, :content_body)
   end
+
 end
