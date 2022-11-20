@@ -52,11 +52,13 @@ $rspec
   grant_type: password,
   email: admin@admin.com, 
   password: adminadmin, 
-  client_id: (see the next step how to obtain it) <- uid,
-  client_secret: (see the next step how to obtain it) <- secret
+  client_id: (see the next section on how to obtain it) <- uid,
+  client_secret: (see the next section on how to obtain it) <- secret
   }
   ``` 
-3. After the database is seeded,
+
+## Obtaining Secret and UID
+After the database is seeded,
 
  Open rails console
 
