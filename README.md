@@ -49,10 +49,10 @@ $rspec
   e.g.  
   ```  
   { 
-  grant_type: 'Monclat',
-  email: 'ABC Factory Co Ltd.', 
-  password: 'bomber' 
-  client_id: (see the next step how to obtain it) <- uid
+  grant_type: password,
+  email: admin@admin.com, 
+  password: adminadmin, 
+  client_id: (see the next step how to obtain it) <- uid,
   client_secret: (see the next step how to obtain it) <- secret
   }
   ``` 
