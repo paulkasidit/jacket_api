@@ -56,7 +56,7 @@ $rspec
   client_secret: (see the next step how to obtain it) <- secret
   }
   ``` 
-3. After the database is seeded 
+3. After the database is seeded,
 
  Open rails console
 
@@ -82,7 +82,7 @@ $rspec
 1. Use an API platform such as Postman. 
 
 2. GET -> route "{your local host}/jackets" 
-   -> This will list all jackets in the database. Don't forget to run seed your database first! 
+   -> This will list all jackets in the database. Don't forget to seed your database first! 
 
 2. POST -> route "{your local host}/jackets" 
   -> Refer to database schema for appropriate parameter headers to include in your post body. 
@@ -99,7 +99,7 @@ $rspec
   
 
 3. DELETE -> route "{your local host}/jackets/id"
-   -> This can be obtained via listing all available jacket via the POST route under the "id" column. 
+   -> This can be obtained via listing all available jackets via the POST route, the ids will be under the "id" column. 
 
 ## Known Bugs
 
