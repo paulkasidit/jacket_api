@@ -77,8 +77,6 @@ After the database is seeded,
    Doorkeeper::Application.find_by(name: "Admin").secret
   ``` 
 
-*This token is provided for you when you seed the database, there is no need to create/request a new one. Run the command as is. 
-
 4. POST -> this request with the above mentioned params. If it is successful, information about the token will be returned (expiry date, etc.). 
 
 ## Using the API 
