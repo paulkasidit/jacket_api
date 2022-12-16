@@ -44,7 +44,7 @@ $rspec
 
 1. There will be a dummy account provided when you seed your database. Pay attention! 
 
-2. Use an API platform such as Postman, login with these params 
+2. Use an API platform such as Postman, login with these params POST "/oauth/token"
 
   e.g.  
   ```  
@@ -82,27 +82,19 @@ After the database is seeded,
 
 ## Using the API 
 
-1. Use an API platform such as Postman. 
 
-2. GET -> route "{your local host}/jackets" 
-   -> This will list all jackets in the database. Don't forget to seed your database first! 
+| Method  | URL | Example | Result | Params |
+| :--- |:---| :---| :---| :---|
+|GET| `localhost:3000/` |`localhost:3000/jackets`| Returns a list of all jackets in the database| None required |
+|GET|`localhost:3000/jackets/:id`| `localhost:3000/quotes/38`| Returns all information related to jacket with ID=1| :id - The id of a particular jacket (required) |
+|POST|`http://localhost:3000/quotes/`|Adds jacket to database. If POST is succesfull, returns database object for newly created jacket.| { 
+jacket_brand: 'example-jacket',
+jacket_manufacturer 'example-factory', 
+jacket_category: 'example-category' 
+jacket_price: 19.99
+} - The content of a jacket (required)|
+|DELETE|`http://localhost:3000/quotes/:id`|`http://localhost:3000/jackets/1`|Deletes the jacket with ID=1 from database| :id - id of the jacket to delete |
 
-2. POST -> route "{your local host}/jackets" 
-  -> Refer to database schema for appropriate parameter headers to include in your post body. 
-
-  e.g.  
-  ```  
-  { 
-  jacket_brand: 'Monclat',
-  jacket_manufacturer 'ABC Factory Co Ltd.', 
-  jacket_category: 'bomber' 
-  jacket_price: 19.99
-  }
-  ``` 
-  
-
-3. DELETE -> route "{your local host}/jackets/id"
-   -> This can be obtained via listing all available jackets via the POST route, the ids will be under the "id" column. 
 
 ## Known Bugs
 
