@@ -8,8 +8,6 @@
 * Ruby 
 * Rails 
 * Active Record
-* Devise 
-* Doorkeeper
 
 ## Description
 
