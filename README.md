@@ -46,8 +46,8 @@ $rspec
 | Method  | URL | Example | Result | Params |
 | :--- |:---| :---| :---| :---|
 |GET| `localhost:3000/` |`localhost:3000/jackets`| Returns a list of all jackets in the database| None required |
-|GET|`localhost:3000/jackets/:id`| `localhost:3000/quotes/38`| Returns all information related to jacket with ID=1| :id - The id of a particular jacket (required) |
-|POST|`http://localhost:3000/quotes/`| `http://localhost:3000/quotes/` | Adds jacket to database. If POST is succesfull, returns database object for newly created jacket.| | 
+|GET|`localhost:3000/jackets/:id`| `localhost:3000/quotes/38`| Returns all information related to jacket with ID=1| :id - The id of a particular jacket (required) | 
+|POST|`http://localhost:3000/quotes/`| `http://localhost:3000/quotes/` | Adds jacket to database. If POST is succesfull, returns database object for newly created jacket.| x | 
 |DELETE|`http://localhost:3000/quotes/:id`|`http://localhost:3000/jackets/1`|Deletes the jacket with ID=1 from database| :id - id of the jacket to delete |
 
 jacket_brand: 'example-jacket',
