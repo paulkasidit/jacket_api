@@ -40,46 +40,6 @@ $rails s
 $rspec 
 ``` 
 
-## Authenticating with Doorkeeper and Devise 
-
-1. There will be a dummy account provided when you seed your database. Pay attention! 
-
-2. Use an API platform such as Postman, login with these params POST "/oauth/token"
-
-  e.g.  
-  ```  
-  { 
-  grant_type: password,
-  email: admin@admin.com, 
-  password: adminadmin, 
-  client_id: (see the next section on how to obtain it) <- uid,
-  client_secret: (see the next section on how to obtain it) <- secret
-  }
-  ``` 
-3. POST -> this request with the above mentioned params. If it is successful, information about the token will be returned (expiry date, etc.).
-
-## Obtaining Secret and UID
-After the database is seeded,
-
- Open rails console
-
-  ``` 
-   rails console
-  ``` 
-
- run for uid 
-
-  ``` 
-   Doorkeeper::Application.find_by(name: "Admin").uid
-  ``` 
-
- run for secret
-   ``` 
-   Doorkeeper::Application.find_by(name: "Admin").secret
-  ``` 
- 
-* This token is provided for you when you seed the database, there is no need to create/request a new one. Run the command as is. 
-
 ## Using the API 
 
 
@@ -92,7 +52,7 @@ jacket_brand: 'example-jacket',
 jacket_manufacturer 'example-factory', 
 jacket_category: 'example-category' 
 jacket_price: 19.99
-} - The content of a jacket (required)|
+} | 
 |DELETE|`http://localhost:3000/quotes/:id`|`http://localhost:3000/jackets/1`|Deletes the jacket with ID=1 from database| :id - id of the jacket to delete |
 
 
