@@ -40,6 +40,13 @@ $rspec
 
 ## Using the API 
 
+1. Use an API platform such as Postman. 
+
+2. GET -> route "{your local host}/jackets" 
+   -> This will list all jackets in the database. Don't forget to seed your database first! 
+
+2. POST -> route "{your local host}/jackets" 
+  -> Refer to database schema for appropriate parameter headers to include in your post body. 
 
 | Method  | URL | Example | Result | Params |
 | :--- |:---| :---| :---| :---|
@@ -47,6 +54,9 @@ $rspec
 |GET|`localhost:3000/jackets/:id`| `localhost:3000/quotes/38`| Returns all information related to jacket with ID=1| :id - The id of a particular jacket (required). | 
 |POST|`http://localhost:3000/quotes/`| `http://localhost:3000/quotes/` | Adds jacket to database. If POST is successful, returns database object for newly created jacket.| { jacket_brand: " ", jacket_manufacturer " ", jacket_category: " ",jacket_price: e.g 19.99 } | 
 |DELETE|`http://localhost:3000/quotes/:id`|`http://localhost:3000/jackets/1`|Deletes the jacket with ID=1 from database| :id - id of the jacket to delete. |
+
+3. DELETE -> route "{your local host}/jackets/id"
+   -> This can be obtained via listing all available jackets via the POST route, the ids will be under the "id" column. 
 
 ## Known Bugs
 
