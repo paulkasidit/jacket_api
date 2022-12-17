@@ -5,10 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :jackets
-
-  use_doorkeeper do
-    skip_controllers :authorizations, :applications, :authorized_applications
-  end
   
 end
 

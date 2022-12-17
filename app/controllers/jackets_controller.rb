@@ -1,7 +1,5 @@
 class JacketsController < ApplicationController
     
-    before_action :authenticate_user!
-    
     def index
       @jackets = Jacket.all 
       json_response(@jackets)
